@@ -12,7 +12,8 @@ func InitRouter() *gin.Engine {
 	router.GET("/line/:id", GetlineApi)
 	router.PUT("/line/:id", ModlineApi)
 	router.DELETE("/line/:id", DellineApi)
-	router.POST("/applay", ApplayApi)
-	router.POST("/reboot", RebootApi)
+	router.GET("/applay/:id", ApplayApi)
+	router.GET("/reboot", RebootApi)
+	router.GET("/useline", UseLineApi)
 	return router
 }
